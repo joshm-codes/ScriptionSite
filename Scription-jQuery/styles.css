@@ -143,7 +143,15 @@ header nav ul li a {
 }
 
 /************ Slider Styles **************/
-
+.flexslider .slides {
+	display: block;
+}
+.flexslider .slides img{
+	display: none;
+}
+.flex-direction-nav{
+	display: none;
+}
 #slider {
 	margin-bottom: 150px;
 }
@@ -159,7 +167,11 @@ header nav ul li a {
 }
 
 .slide1 { background-image: url("images/slider/slider01-small.jpg"); }
-/*Add styling for additional slide backgrounds*/
+.slide2 { background-image: url("images/slider/slider02-small.jpg");}
+.slide3 { background-image: url("images/slider/slider03-small.jpg");}
+.slide4 { background-image: url("images/slider/slider04-small.jpg");}
+.slide5 { background-image: url("images/slider/slider05-small.jpg");}
+.slide6 { background-image: url("images/slider/slider06-small.jpg");}
 
 #slider .cta {
 	position: absolute;
