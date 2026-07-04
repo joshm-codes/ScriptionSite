@@ -42,5 +42,26 @@
                 }, 6000); 
             }
         });
+
+        $('.logo').click(function(){
+            $('html').animate({scrollTop: 0}, 800, 'easeOutCirc');
+            return false;
+        });
+        $('nav ul li a').click(function(){
+            var thisSection = $(this).attr('href');
+            var thisLink = $(this);
+
+            $('html').stop().animate({
+                scrollTop: $(thisSection).offset().top -100
+            }, 800, 'easeOutCirc', function(){
+                $('nav ul li a').removeAttr('class');
+                $(thisLink).addClass('selected');
+            });
+            return false;
+        });
+        $(window).on('scroll', function(){
+
+        });
+
     });
 })();
