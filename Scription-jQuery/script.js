@@ -48,8 +48,8 @@
             return false;
         });
         $('nav ul li a').click(function(){
-            var thisSection = $(this).attr('href');
-            var thisLink = $(this);
+            let thisSection = $(this).attr('href');
+            let thisLink = $(this);
 
             $('html').stop().animate({
                 scrollTop: $(thisSection).offset().top -100
@@ -59,9 +59,36 @@
             });
             return false;
         });
-        $(window).on('scroll', function(){
 
+        var posts = $('#overview, #download, #pricing, #listen, #ourteam');
+        var postTops = [];
+
+        posts.each(function(){
+            postTops.push($(this).offset().top);
         });
 
-    });
+        $(window).scroll(function(){
+            let pageTop = $(window).scrollTop() + 150; 
+
+            for (let i = 0; i < postTops.length; i++) {
+                if (pageTop >= postTops[i] && (i === postTops.length - 1 || pageTop < postTops[i + 1])) {
+
+            $('nav ul li a').removeClass('selected');
+            $('nav ul li a').eq(i).addClass('selected');
+        }
+    }
+});
+        function calculatePostTops() {
+            postTops = [];
+            posts.each(function(){
+                postTops.push($(this).offset().top);
+            });
+        }
+
+        calculatePostTops();
+
+        $(window).on('resize', calculatePostTops);
+
+
+});
 })();

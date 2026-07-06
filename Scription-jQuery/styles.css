@@ -98,7 +98,7 @@ header {
 	height: 101px;
 	padding: 10px 0;
 	/*background-color: rgba(255,224,153,0.75);*/
-	background-color: rgba(0,0,0,0.75);
+	background-color: #FF5964;
 	position: fixed;
 	top:0;
 	left: 0;
@@ -119,7 +119,7 @@ header .logo:hover {
 
 .logo h1 {
 	font-size: 24px;
-	color: var(--firey-rose);
+	color: black;
 	position: absolute;
 	top: 10px;
 	left: 42px;
@@ -146,7 +146,7 @@ nav ul li a {
 }
 
 .selected {
-	color: rgb(189, 54, 17);
+	color: black;
 	transform: scale(1.2);
 	transition: all 0.5s;
 }
@@ -341,7 +341,7 @@ nav ul li a {
 /************ Pricing Styles *************/
 
 #pricing {
-	background-color: var(--english-violet);
+	background-color: black;
 	color: #fff;
 }
 
