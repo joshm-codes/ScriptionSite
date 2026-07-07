@@ -72,12 +72,13 @@
 
             for (let i = 0; i < postTops.length; i++) {
                 if (pageTop >= postTops[i] && (i === postTops.length - 1 || pageTop < postTops[i + 1])) {
+                    $('nav ul li a').removeClass('selected');
+                    $('nav ul li a').eq(i).addClass('selected');
+                }
+            }
+        });
 
-            $('nav ul li a').removeClass('selected');
-            $('nav ul li a').eq(i).addClass('selected');
-        }
-    }
-});
+        
         function calculatePostTops() {
             postTops = [];
             posts.each(function(){
@@ -89,6 +90,17 @@
 
         $(window).on('resize', calculatePostTops);
 
+        $('#tabs ul li a').click(function(e){
+            e.preventDefault();
 
-});
-})();
+            $('#tabs a').css({background: 'var(--tea-green)', color: 'var(--rich-black)'});
+            $(this).css({background: 'var(--tea-green-light)', color: 'var(--rich-black)'});
+
+            const thisTab = $(this).attr('href');
+
+            $('#tabs > div:visible').fadeOut(250, function(){
+                $(thisTab).fadeIn(250);
+            });
+        });
+    });
+    })();
