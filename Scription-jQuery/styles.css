@@ -67,7 +67,7 @@ button {
 	border-radius: 15px;
 	height: 30px;
 	line-height: 30px;
-	background-color: var(--tea-green);
+	background-color: var(--firey-rose);
 	color: var(--rich-black);
 	font-weight: 600;
 	padding: 0 20px;
@@ -257,7 +257,7 @@ nav ul li a {
 /************ Download Styles **************/
 
 #download {
-	background-color: var(--tea-green-light);
+	background-color: var(--firey-rose);
 	padding: 0;
 }
 
@@ -277,7 +277,7 @@ nav ul li a {
 #download ul li a {
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 600;
-	color: var(--firey-rose);
+	color: black;
 }
 
 #download article{
@@ -306,7 +306,7 @@ nav ul li a {
 }
 
 #download article:nth-child(2){
-	background-color: var(--tea-green);
+	background-color: #f9e3e3;
 	min-height: 300px;
 	overflow: hidden;
 	position: relative;
@@ -329,24 +329,24 @@ nav ul li a {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: #364A14;
+	background-color: #e8bcbc;
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
 	font-weight: 600;
 	font-family: 'Quicksand', sans-serif;
-	color: var(--jasmine);
+	color: #333;
 }
 
 /************ Pricing Styles *************/
 
 #pricing {
 	background-color: black;
-	color: #fff;
+	color: var(--firey-rose);
 }
 
 #pricing h2 {
-	color: #fff;
+	color: var(--firey-rose);
 }
 
 #pricing #tabs > ul {
@@ -359,8 +359,8 @@ nav ul li a {
     height:30px;
     line-height:30px;
     margin-right:5px;
-    background: var(--tea-green);
-    color: var(--rich-black);
+    background: #e8bcbc;
+    color: #333;
     padding:0 15px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -369,19 +369,19 @@ nav ul li a {
 #pricing #tabs > div {
 	display: none;
 	padding: 15px;
-	background: var(--tea-green-light);
-	color: var(--rich-black);
+	background: #f9e3e3;
+	color: #7a3f3f;
 	border-top-right-radius: 10px;
 	min-height: 500px;
 }
 
 #pricing #tabs > div:first-of-type {
 	display: block;
-	background: var(--tea-green-light);
+	background: #e8bcbc;
 }
 
 #pricing #tabs > ul > li:first-of-type a {
-	background: var(--tea-green-light);
+	background: #e8bcbc;
 }
 
 #pricing #tabs div ul {
@@ -409,9 +409,16 @@ nav ul li a {
 
 /************ listen Styles **************/
 
-#listen {
+/*#listen {
 	padding: 0;
+}*/
+#listen {
+    display: flex;
+    gap: 40px;        /* spacing between left and right */
+    align-items: flex-start;
+    padding: 40px 0;  /* top/bottom breathing room */
 }
+
 
 #listen article {
 	padding: 20px;
@@ -420,13 +427,14 @@ nav ul li a {
 #listen article:first-of-type {
 	background: var(--rich-black);
 	color: #fff;
+	padding: 30px;
+	border-radius: 8px;
+	flex: 1;
 }
 
 #listen h2 {
 	color: #fff;
 }
-
-/* Add two rotator rules */
 
 #listen blockquote {
 	font-size: 28px;
@@ -435,6 +443,8 @@ nav ul li a {
 
 #listen blockquote{
 	text-indent: -.4em;
+	font-size: 20px;
+	line-height: 1.4em;
 }
 
 #listen blockquote footer {
@@ -446,11 +456,42 @@ nav ul li a {
 	color: var(--firey-rose);
 }
 
+#rotator {
+    flex: 1;               
+    padding: 30px;  
+    border-radius: 8px;
+    position: relative;    
+    min-height: 200px;     
+}
+#rotator blockquote footer {
+    background: #f7f7f7;  
+	display: inline-block;
+	padding: 4px 8px;
+	border-radius: 4px;   
+}	  
+
+#rotator blockquote {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    opacity: 0;
+	filter: blur(4px);
+    transition: opacity 3.5s ease, filter 3.5s ease;
+}
+
+#rotator blockquote.show {
+    opacity: 1;
+	filter: blur(0);
+}
+
+
 
 /************ Our Team Styles **************/
 
 #ourteam {
-	background: #FCF7ED;
+	background: var(--firey-rose);
 }
 
 #ourteam h2 {
@@ -485,7 +526,7 @@ nav ul li a {
 }
 
 #ourteam figcaption span {
-	color: var(--firey-rose);
+	color: white;
 }
 /************ Footer Styles *************/
 

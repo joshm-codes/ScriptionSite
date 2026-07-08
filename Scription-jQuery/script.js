@@ -93,14 +93,28 @@
         $('#tabs ul li a').click(function(e){
             e.preventDefault();
 
-            $('#tabs a').css({background: 'var(--tea-green)', color: 'var(--rich-black)'});
-            $(this).css({background: 'var(--tea-green-light)', color: 'var(--rich-black)'});
+            $('#tabs a').css({background: '#e8bcbc', color: '#7a3f3f'});
+            $(this).css({background: '#7a3f3f', color: '#333'});
 
             const thisTab = $(this).attr('href');
 
-            $('#tabs > div:visible').fadeOut(250, function(){
-                $(thisTab).fadeIn(250);
+            $('#tabs > div:visible').fadeOut(150, function(){
+                $(thisTab).fadeIn(150);
             });
+        });
+
+        $(function (){
+            const $quotes = $("#rotator blockquote");
+            let index = 0;
+
+            $quotes.removeClass("show").eq(index).addClass("show");
+
+            setInterval(()=> {
+                $quotes.eq(index).removeClass("show");
+                index = (index + 1) % $quotes.length;
+                $quotes.eq(index).addClass("show");
+            }, 7000);  
+            
         });
     });
     })();
