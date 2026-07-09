@@ -90,11 +90,14 @@
 
         $(window).on('resize', calculatePostTops);
 
+        $('#tabs ul li a').first().addClass('active');
+
+
         $('#tabs ul li a').click(function(e){
             e.preventDefault();
 
-            $('#tabs a').css({background: '#e8bcbc', color: '#7a3f3f'});
-            $(this).css({background: '#7a3f3f', color: '#333'});
+            $('#tabs ul li a').removeClass('active');
+            $(this).addClass('active');
 
             const thisTab = $(this).attr('href');
 

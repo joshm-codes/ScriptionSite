@@ -359,8 +359,8 @@ nav ul li a {
     height:30px;
     line-height:30px;
     margin-right:5px;
-    background: #e8bcbc;
-    color: #333;
+    background: var(--firey-rose);
+    color: #e8bcbc;
     padding:0 15px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -369,7 +369,7 @@ nav ul li a {
 #pricing #tabs > div {
 	display: none;
 	padding: 15px;
-	background: #f9e3e3;
+	background: #e8bcbc;
 	color: #7a3f3f;
 	border-top-right-radius: 10px;
 	min-height: 500px;
@@ -380,8 +380,10 @@ nav ul li a {
 	background: #e8bcbc;
 }
 
-#pricing #tabs > ul > li:first-of-type a {
+#pricing #tabs > ul >li >a.active{
 	background: #e8bcbc;
+	color: #7a3f3f;
+	font-weight: bold;
 }
 
 #pricing #tabs div ul {
