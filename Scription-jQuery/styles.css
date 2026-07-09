@@ -4,7 +4,6 @@ h1, h2, h3, h4, p, ul, li {
 	margin: 0;
 	padding: 0;
 }
-
 nav ul, nav ol {
 	list-style-type: none;
 }
@@ -26,7 +25,6 @@ a { text-decoration: none; }
 	--tea-green: #C8D6AF;
 	--tea-green-light: #F7FFEA;
 	--english-violet: #48284A;
-
 }
 
 /************ Basic typography *************/
@@ -195,7 +193,6 @@ nav ul li a {
 .slide5 { background-image: url("images/slider/slider05-small.jpg");}
 .slide6 { background-image: url("images/slider/slider06-small.jpg");}
 
-
 #slider .cta{
 	padding: 15px 20px;
 	position: absolute;
@@ -205,8 +202,9 @@ nav ul li a {
 	right: 0;
 	background: rgba(6,25,35,0.35);
 	padding: 10px;
-	color:#fff;
+	color:#ffffff;
 	width: 100%;
+	border-radius: 5px;
 	transform-origin: bottom right;
 	will-change: transform, opacity;
 }
@@ -237,6 +235,7 @@ nav ul li a {
 	opacity: 1;
 	transform: translateY(0);
 }
+
 /************ Overview Styles *************/
 
 .intro h2 {
@@ -252,7 +251,6 @@ nav ul li a {
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
 }
-
 
 /************ Download Styles **************/
 
@@ -408,19 +406,14 @@ nav ul li a {
 	text-align: center;
 }
 
-
 /************ listen Styles **************/
 
-/*#listen {
-	padding: 0;
-}*/
 #listen {
     display: flex;
     gap: 40px;        /* spacing between left and right */
     align-items: flex-start;
     padding: 40px 0;  /* top/bottom breathing room */
 }
-
 
 #listen article {
 	padding: 20px;
@@ -488,8 +481,6 @@ nav ul li a {
 	filter: blur(0);
 }
 
-
-
 /************ Our Team Styles **************/
 
 #ourteam {
@@ -530,6 +521,7 @@ nav ul li a {
 #ourteam figcaption span {
 	color: white;
 }
+
 /************ Footer Styles *************/
 
 #page > footer {
